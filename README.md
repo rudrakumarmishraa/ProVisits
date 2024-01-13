@@ -35,5 +35,5 @@ To run ProVisits locally, follow these steps:
 ```
 ## Authors
 
-- [@rudrakumarmishraa](https://www.github.com/rudrakumarmishra)
+- [Rudra Kumar Mishra](https://www.github.com/rudrakumarmishraa)
 
