@@ -1,0 +1,31 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="add-products">
+    <h1>Add Product</h1>
+    {% if cardslen != 0 %}
+    <form method="post" class="add-products" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p id="error">{{ error }}</p>
+        <div class="input">
+            <input type="text" name="title" placeholder="Title">
+            <input type="number" name="price" placeholder="Price (INR)">
+            <select name="cardname" id="cardname">
+                {% for card in cards %}
+                <option value="{{ card }}">{{ card }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="input">
+            <input type="file" name="image" placeholder="image">
+            <button>Add Product</button>
+        </div>
+    </form>
+    {% else %}
+    <p>Please add card to add products.</p>
+    {% endif %}
+</div>
+<script>
+document.querySelector("input[name='title']").addEventListener("keyup", (event) => { if (event.target.value.length > 49 ) { document.querySelector("input[name='title']").disabled = true } })
+document.querySelector("input[name='price']").addEventListener("keyup", (event) => { if (event.target.value.length > 19 ) { document.querySelector("input[name='price']").disabled = true } })
+</script>
+{% endblock %}

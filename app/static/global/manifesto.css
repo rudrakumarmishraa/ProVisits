@@ -1,0 +1,39 @@
+/* Manifesto CSS */
+#manifesto {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--color-section-bg);
+    border-radius: 10px;
+}
+
+#manifesto h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+#manifesto .sub-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#manifesto .sub-sec h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+#manifesto .sub-sec p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#manifesto .sub-sec b {
+    font-size: 0.9rem;
+}

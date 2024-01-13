@@ -1,0 +1,30 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="analytics">
+    <h1>Analytics Your ProVisits Account ({{ year }})</h1>
+    <canvas class="chart"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+new Chart(document.querySelector('.chart').getContext('2d'), {
+    type: 'bar',
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', "August", "September", "October", "November", "December"],
+        datasets: [{
+            label: 'Monthly Views',
+            backgroundColor: 'rgba(75, 192, 192, 0.7)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            data: [parseInt("{{ cardAnalytics.01 }}"), parseInt("{{ cardAnalytics.02 }}"), parseInt("{{ cardAnalytics.03 }}"), parseInt("{{ cardAnalytics.04 }}"), parseInt("{{ cardAnalytics.05 }}"), parseInt("{{ cardAnalytics.06 }}"), parseInt("{{ cardAnalytics.07 }}"), parseInt("{{ cardAnalytics.08 }}"), parseInt("{{ cardAnalytics.09 }}"), parseInt("{{ cardAnalytics.10 }}"), parseInt("{{ cardAnalytics.11 }}"), parseInt("{{ cardAnalytics.12 }}")],
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

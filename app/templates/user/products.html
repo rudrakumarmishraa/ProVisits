@@ -1,0 +1,73 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="products">
+    <h1>Products</h1>
+    <div class="products-top-bar">
+        <a href="/addproduct" class="left">
+            <svg viewBox="0 0 448 512">
+                <path opacity="1" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
+            </svg>
+            Products
+        </a>
+        <div class="right">
+            <svg id="tiles" class="active" viewBox="0 0 512 512">
+                <path opacity="1" d="M149.3 56v80c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V56c0-13.3 10.7-24 24-24h101.3c13.3 0 24 10.7 24 24zm181.3 240v-80c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24zm32-240v80c0 13.3 10.7 24 24 24H488c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24zm-32 80V56c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24zm-205.3 56H24c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24zM0 376v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24zm386.7-56H488c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24zm0 160H488c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H386.7c-13.3 0-24 10.7-24 24v80c0 13.3 10.7 24 24 24zM181.3 376v80c0 13.3 10.7 24 24 24h101.3c13.3 0 24-10.7 24-24v-80c0-13.3-10.7-24-24-24H205.3c-13.3 0-24 10.7-24 24z"/>
+            </svg>
+            <svg id="list" viewBox="0 0 512 512">
+                <path opacity="1" d="M64 144a48 48 0 1 0 0-96 48 48 0 1 0 0 96zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H192zM64 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm48-208a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="products">
+        <div class="tiles">
+            {% for p in  products %}
+            {% for product in  p %}
+            <div class="card">
+                <h1>{{ product.title }}</h1>
+                <h3>INR {{ product.price }}</h3>
+                <div class="actions">
+                    <a href="/product/{{ product.PID }}">View</a>
+                    <a href="/editproduct/{{ product.PID }}">Edit</a>
+                    <a href="/deleteproduct/{{ product.PID }}">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="list">
+            <div class="items">
+                <span>Image</span>
+                <span>Title</span>
+                <span>Actions</span>
+            </div>
+            {% for p in  products %}
+            {% for product in  p %}
+            <div class="items">
+                <img src="/media/{{ product.image }}" alt="Image">
+                <span>{{ product.title }}</span>
+                <div class="actions">
+                    <a href="/product/{{ product.PID }}">View</a>
+                    <a href="/editproduct/{{ product.PID }}">Edit</a>
+                    <a href="/deleteproduct/{{ product.PID }}">Delete</a>
+                </div>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+document.querySelector("#tiles").addEventListener("click", ()=>{
+    document.querySelector("#tiles").classList = "active"
+    document.querySelector("#list").classList = ""
+    document.querySelector(".list").style.display = "none"
+    document.querySelector(".tiles").style.display = "flex"
+})
+document.querySelector("#list").addEventListener("click", ()=>{
+    document.querySelector("#list").classList = "active"
+    document.querySelector("#tiles").classList = ""
+    document.querySelector(".tiles").style.display = "none"
+    document.querySelector(".list").style.display = "flex"
+})
+</script>
+{% endblock %}

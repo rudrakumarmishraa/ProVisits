@@ -1,0 +1,12 @@
+/* Product CSS */
+
+#product {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    gap: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+}

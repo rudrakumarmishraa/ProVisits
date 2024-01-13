@@ -1,0 +1,34 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="editcard">
+    <h1>Edit Card</h1>
+    <p id="error">{{ error }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Basic Details</h3>
+        <div class="input">
+            <input type="text" value="{{ card.cardname }}" placeholder="Cardname" disabled>
+            <input type="text" value="{{ card.name }}" name="name" placeholder="Full Name" required>
+            <input type="text" value="{{ card.position }}" name="position" placeholder="Position" required>
+            <textarea name="about" placeholder="About" required>{{ card.about }}</textarea>
+        </div>
+        <h3>Links</h3>
+        <div class="input">
+            <input type="number" value="{{ card.phone }}" name="phone" placeholder="Phone" required>
+            <input type="number" value="{{ card.whatsaspp }}" name="whatsaspp" placeholder="Whatsaspp" required>
+            <input type="text" value="{{ card.email }}" name="email" placeholder="Email" required>
+            <input type="text" value="{{ card.website }}" name="website" placeholder="Website" required>
+            <input type="text" value="{{ card.address }}" name="address" placeholder="Address" required>
+        </div>
+        <h3>Social Links</h3>
+        <div class="input">
+            <input type="text" value="{{ card.facebook }}" name="facebook" placeholder="facebook">
+            <input type="text" value="{{ card.instagram }}" name="instagram" placeholder="instagram">
+            <input type="text" value="{{ card.instagram }}" name="instagram" placeholder="twitter">
+            <input type="text" value="{{ card.linkedin }}" name="linkedin" placeholder="linkedin">
+            <input type="text" value="{{ card.youtube }}" name="youtube" placeholder="youtube">
+        </div>
+        <button>SAVE</button>
+    </form>
+</div>
+{% endblock %}

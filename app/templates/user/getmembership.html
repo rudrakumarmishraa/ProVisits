@@ -1,0 +1,35 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="get-membership">
+    <h1>{{ type }} Membership Plans <span>${{ price }}</span></h1>
+    <div class="container">
+        <h3>Perks in {{ type }} Membership Plans</h3>
+        <ul>
+            <li>{{ li }}</li>
+            <li>Custom theme provided</li>
+            <li>Some more perks</li>
+            <li>Some more perks</li>
+            <li>Some more perks</li>
+        </ul>
+        <a href="#" id="pay-btn">Get Membership Now</a>
+    </div>
+</div>
+ <!-- Razorpay's Javascript code. -->
+ <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+ <script>
+   var options = {
+     key: "{{ razorpay_merchant_key }}", 
+     amount: "{{ razorpay_amount }}", 
+     currency: "{{ currency }}",
+     name: "Dj Razorpay", 
+     order_id: "{{ razorpay_order_id }}", 
+     callback_url: "{{ callback_url }}",
+   };
+   var rzp1 = new Razorpay(options);
+   // add event listener to the payment button.
+   document.getElementById("pay-btn").onclick = function (e) {
+     rzp1.open();
+     e.preventDefault();
+   };
+ </script>
+{% endblock %}

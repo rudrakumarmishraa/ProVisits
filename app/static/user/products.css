@@ -1,0 +1,232 @@
+/* Products CSS */
+
+#products {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+#products h1 {
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--color-secondary);
+}
+
+#products .products-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    background: var(--color-bg);
+}
+
+#products .products-top-bar .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px 20px;
+    border: 1px solid var(--color-fg);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+#products .products-top-bar .left svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-fg);
+    transition: 0.5s ease;
+}
+
+#products .products-top-bar .left:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#products .products-top-bar .left:hover svg {
+    fill: var(--color-primary);
+}
+
+#products .products-top-bar .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#products .products-top-bar .right svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-fg);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#products .products-top-bar .right svg:hover {
+    fill: var(--color-primary-variant);
+    transform: scale(1.1);
+}
+
+#products .products-top-bar .right svg.active {
+    fill: var(--color-primary) !important;
+    transform: scale(1.2) !important;
+}
+
+#products .tiles {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+#products .tiles .card {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: var(--color-section-bg);
+    border-radius: 10px;
+}
+
+#products .tiles .card h1 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+#products .tiles .card h3 {
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+}
+
+#products .tiles .card p {
+    font-size: 0.9rem;
+}
+
+#products .tiles .card .actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0;
+    padding: 0 20px;
+}
+
+#products .tiles .card .actions a {
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#products .tiles .card .actions a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#products .tiles .card .actions a:last-child {
+    color: var(--color-fg);
+    border: 1px solid var(--color-danger);
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#products .tiles .card .actions a:last-child:hover {
+    color: var(--color-danger);
+}
+
+#products .list {
+    width: 98%;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#products .list .items {
+    width: 100%;
+    padding: 10px 5px;
+    background: var(--color-section-bg);
+    border-radius: 5px;
+}
+
+#products .list .items {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    gap: 1rem;
+    background: var(--color-section-bg);
+    border-bottom: 3px solid var(--color-bg);
+    border-right: 3px solid var(--color-bg);
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+#products .list .items img {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#products .list .items:first-child {
+    border: 0;
+    font-weight: bold;
+    color: var(--color-primary);
+    background: var(--color-bg);
+}
+
+#products .list .items .actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 1rem 0;
+    padding: 0 20px;
+}
+
+#products .list .items .actions a {
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#products .list .items .actions a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#products .list .items .actions a:last-child {
+    color: var(--color-fg);
+    border: 1px solid var(--color-danger);
+    padding: 2px 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#products .list .items .actions a:last-child:hover {
+    color: var(--color-danger);
+}
+
+/* Media Query for Cards CSS */
+@media screen and (max-width:400px) {
+    #products .tiles .card {
+        width: 260px;
+    }
+}

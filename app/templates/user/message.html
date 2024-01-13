@@ -1,0 +1,12 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="message">
+    <h1>Message</h1>
+    <div class="message">
+        <h2>{{ message.name }}</h2>
+        <span>sent in card <strong>{{ message.cardname }}</strong> on <strong>{{ message.date }}</strong>, <strong>{{ message.time }}</strong></span>
+        <div>{{ message.message }}</div>
+        <p>sent by <strong>{{ message.name }}</strong> and his email is <strong><a href="mailto:{{ message.email }}">{{ message.email }}</a></strong></p>
+    </div>
+</div>
+{% endblock %}

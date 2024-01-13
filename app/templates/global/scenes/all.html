@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<meta charset="UT-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://img.icons8.com/nolan/64/bank-card-back-side.png" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'global/all.css' %}">
+<link rel="stylesheet" href="{% static 'global/header.css' %}">
+<link rel="stylesheet" href="{% static 'global/homepage.css' %}">
+<link rel="stylesheet" href="{% static 'global/about.css' %}">
+<link rel="stylesheet" href="{% static 'global/signin.css' %}">
+<link rel="stylesheet" href="{% static 'global/signup.css' %}">
+<link rel="stylesheet" href="{% static 'global/testimonials.css' %}">
+<link rel="stylesheet" href="{% static 'global/contactus.css' %}">
+<link rel="stylesheet" href="{% static 'global/carrer.css' %}">
+<link rel="stylesheet" href="{% static 'global/product.css' %}">
+<link rel="stylesheet" href="{% static 'global/manifesto.css' %}">
+<link rel="stylesheet" href="{% static 'global/bugs.css' %}">
+<link rel="stylesheet" href="{% static 'global/sourcecode.css' %}">
+<link rel="stylesheet" href="{% static 'global/footer.css' %}">
+<title>{{ title }} | ProVisits</title>
+</head>
+<body>
+<!-- Navbar Section Starts Here -->
+{% include 'global/scenes/header.html' %}
+<!-- Navbar Section Ends Here -->
+<!-- All Sections Starts Here -->
+{% block content %}
+{% endblock %}
+<!-- All Sections Ends Here -->
+<!-- Footer Section Starts Here -->
+{% include 'global/scenes/footer.html' %}
+<!-- Footer Section Ends Here -->
+</body>
+<script>
+// Responsive Navbar for mobile view
+document.querySelector("#bars").addEventListener("click", () => {
+    if (document.querySelector('.navigation').style.maxHeight === "") { document.querySelector('.navigation').style.maxHeight = "500px" }
+    else if (document.querySelector('.navigation').style.maxHeight === "500px") { document.querySelector('.navigation').style.maxHeight = "0px" }
+    else if (document.querySelector('.navigation').style.maxHeight === "0px") { document.querySelector('.navigation').style.maxHeight = "500px" }
+})
+// Changes Background of Navbar on scroll
+window.onscroll = () => {
+    document.querySelector('#navbar').style.background  = "var(--color-bg)"
+    document.querySelector('#navbar').style.boxShadow  = "-5px 2px 50px 2px var(--color-bg)"
+}
+</script>
+</html>

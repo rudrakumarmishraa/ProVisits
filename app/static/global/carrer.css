@@ -1,0 +1,43 @@
+/* Career CSS */
+#career {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--color-section-bg);
+    border-radius: 10px;
+}
+
+#career h1 {
+    color: var(--color-secondary);
+    font-size: 2rem;
+}
+
+#career .career {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#career .career div {
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    text-align: justify;
+    background: var(--color-section-bg);
+    border-radius: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#career .career div:hover {
+    opacity: 0.7;
+}
+
+#career .career div h4 {
+    font-size: 1.2rem;
+}

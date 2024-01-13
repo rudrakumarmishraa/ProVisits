@@ -1,0 +1,51 @@
+/* Message CSS */
+
+#message {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+#message h1 {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#message .message {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#message .message h2 {
+    color: var(--color-primary-variant);
+}
+
+#message .message span {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+}
+
+#message .message div {
+    width: 100%;
+    padding: 10px;
+    background: var(--color-section-bg);
+    border-radius: 5px;
+}
+
+#message .message p {
+    width: fit-content;
+    padding: 10px;
+    color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+}

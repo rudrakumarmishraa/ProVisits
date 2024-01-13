@@ -1,0 +1,99 @@
+/* Membership CSS */
+
+#membership {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+#membership h1 {
+    color: var(--color-secondary);
+    font-size: 2rem;
+}
+
+#membership .membership {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#membership .membership .section {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    background: var(--color-bg);
+    padding: 10px 20px;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#membership .membership .section h3 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#membership .membership .section svg {
+    width: 40px;
+    height: 40px;
+    fill: var(--color-primary);
+}
+
+#membership .membership .section span {
+    font-size: 2rem;
+}
+
+#membership .membership .section ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 5px;
+}
+
+#membership .membership .section ul li {
+    font-size: 1rem;
+}
+
+#membership .membership .section ul li::before {
+    content: "✔";
+    font-weight: 600;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+#membership .membership .section a {
+    width: fit-content;
+    font-size: 1.25rem;
+    color: var(--color-fg);
+    background: transparent;
+    padding: 5px 30px;
+    margin: 10px auto;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#membership .membership .section a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#membership .membership .section a.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#membership .membership .section:nth-child(1) li:nth-child(3)::before, #membership .membership .section:nth-child(1) li:nth-child(4)::before, #membership .membership .section:nth-child(1) li:nth-child(5)::before {
+    content: "×";
+}
+
+#membership .membership .section:nth-child(2) li:nth-child(4)::before, #membership .membership .section:nth-child(2) li:nth-child(5)::before {
+    content: "×";
+}

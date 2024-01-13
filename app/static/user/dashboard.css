@@ -1,0 +1,111 @@
+/* Dashboard CSS */
+#main-content .pills {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#main-content .pill {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-variant));
+    border-radius: 10px;
+}
+
+#main-content .pill:nth-child(2n) {
+    background: linear-gradient(90deg, var(--color-blue), var(--color-blue-variant));
+}
+
+#main-content .pill h4, #main-content .pill h3 {
+    z-index: 100;
+}
+
+#main-content .pill h4 {
+    font-size: 2rem;
+}
+
+#main-content .pill h3 {
+    font-size: 1.2rem;
+}
+
+#main-content .pill svg {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    bottom: 5px;
+    right: -40px;
+    fill: var(--color-secondary);
+    transition: 1s ease;
+}
+
+#main-content .pill:hover svg {
+    fill: var(--color-fg);
+}
+
+#tables {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#tables h1 {
+    width: 100%;
+    font-size: 2rem;
+}
+
+#tables .tables {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+#tables .tables .items {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    align-items: center;
+    padding: 10px;
+    gap: 1rem;
+    background: var(--color-section-bg);
+    border-radius: 5px;
+}
+
+#tables .tables .items:first-child {
+    background: var(--color-bg);
+    margin-bottom: 3px solid var(--color-bg);
+    font-weight: 900;
+}
+
+#tables .tables .items a {
+    width: fit-content;
+    padding: 5px 20px;
+    border: 1px solid var(--color-fg);
+    border-radius: 10px;
+    transition: 0.5s ease;
+}
+
+#tables .tables .items a:hover {
+    transform: scale(0.95);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Media Query for Dashboard CSS */
+@media screen and (max-width:700px){
+    #main-content .pill {
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+:root {
+    --color-bg: #000;
+    --color-fg: #fff;
+    --color-light: #999;
+    --color-danger: #E3242B;
+    --color-section-bg: rgba(1, 1,1,.3);
+    --color-primary: #c325fe;
+    --color-secondary: #bdb4ff;
+}
+body {
+    width: 100vw;
+    font-size: 18px;
+    color: var(--color-fg);
+    background: var(--color-bg);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 12%, rgba(0,0,69,1) 65%, rgba(17,17,17,0.8939950980392157) 100%);
+}
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+a {
+    color: var(--color-fg);
+    text-decoration: none;
+}
+body,
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+section {
+    backdrop-filter: blur(20px);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

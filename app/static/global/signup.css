@@ -1,0 +1,101 @@
+/* CSS for signup Form */
+#signup-form {
+    display: flex;
+    width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: var(--color-section-bg);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+}
+
+#signup-form h2 {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#signup-form .input {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60px;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+#signup-form .input input {
+    width: 100%;
+    outline: none;
+    font-size: 1.2rem;
+    border: 0;
+    padding: 2px 2px 2px 40px;
+    border-radius: 50px;
+}
+
+#signup-form .input p {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-danger);
+}
+
+#signup-form .input .svg {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    left: 10px;
+    fill: var(--color-bg);
+}
+
+#signup-form #backendError {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-danger);
+}
+
+#signup-form button {
+    color: var(--color-fg);
+    background: transparent;
+    font-size: 1.3rem;
+    border: 1px solid var(--color-fg);
+    padding: 5px 20px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#signup-form button:hover {
+    border-color: var(--color-primary);
+}
+
+#signup-form span {
+    width: 100%;
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 3rem;
+}
+
+#signup-form span a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: 0.5s ease;
+}
+
+#signup-form span a:hover {
+    color: var(--color-primary);
+}
+
+/* Media Query for signup Form */
+@media screen and (max-width:500px) {
+    #signup-form {
+        width: 320px;
+    }
+}

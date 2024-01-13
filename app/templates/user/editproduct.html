@@ -1,0 +1,23 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="edit-products">
+    <h1>Edit Product</h1>
+    <span>Explore our premium product featuring cutting-edge technology and sleek design. Elevate your experience with exceptional quality, advanced features, and unmatched style. Discover excellence with every detail.</span>
+    <form method="post" class="edit-products">
+        {% csrf_token %}
+        <p id="error">{{ error }}</p>
+        <div class="input">
+            <input type="text" name="title" value="{{ p.title }}" placeholder="Title">
+            <input type="number" name="price" value="{{ p.price }}" placeholder="Price (INR)">
+            <select name="cardname" id="cardname">
+                <option value="{{ p.cardname }}">{{ p.cardname }}</option>
+            </select>
+        </div>
+            <button>Edit Product</button>
+    </form>
+</div>
+<script>
+document.querySelector("input[name='title']").addEventListener("keyup", (event) => { if (event.target.value.length > 49 ) { document.querySelector("input[name='title']").disabled = true } })
+document.querySelector("input[name='price']").addEventListener("keyup", (event) => { if (event.target.value.length > 19 ) { document.querySelector("input[name='price']").disabled = true } })
+</script>
+{% endblock %}

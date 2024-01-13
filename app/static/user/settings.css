@@ -1,0 +1,114 @@
+/* Settings CSS */
+#settings {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+#settings h1 {
+    font-size: 2rem;
+}
+
+#settings .settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#settings .settings-form .input {
+    position: relative;
+}
+
+#settings .settings-form .input span {
+    display: block;
+    font-size: 1.5rem;
+    padding: 2px 2px 2px 40px;
+}
+
+#settings .settings-form .input input {
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    padding: 5px 5px 5px 40px;
+    color: var(--color-fg);
+    background: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+}
+
+#settings .settings-form .input input:focus {
+    border-color: var(--color-primary);
+}
+
+#settings .settings-form .input svg {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: var(--color-fg);
+}
+
+#settings .settings-form #error {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-danger);
+    margin: 10px;
+}
+
+#settings .settings-form button {
+    width: fit-content;
+    font-size: 1.2rem;
+    color: var(--color-fg);
+    padding: 5px 20px;
+    background: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#settings .settings-form button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#settings .danger {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+#settings .danger a:first-child {
+    width: fit-content;
+    padding: 5px 20px;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#settings .danger a:first-child:hover  {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+#settings .danger a:last-child {
+    width: fit-content;
+    padding: 5px 20px;
+    color: var(--color-fg);
+    border: 1px solid var(--color-danger);
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#settings .danger a:last-child:hover {
+    color: var(--color-danger);
+    transform: scale(0.97);
+}

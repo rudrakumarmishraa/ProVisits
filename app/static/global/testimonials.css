@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+
+#testimonials {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 3rem;
+}
+
+#testimonials h1 {
+  font-size: 3rem;
+}
+
+#testimonials #sec {
+  margin-bottom: 1rem;
+}
+
+#testimonials .snip1533 {
+  display: inline-block;
+  width: 100%;
+  color: var(--color-light);
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  background-color: var(--color-section-bg);
+  box-shadow: 0 0 5px var(--color-section-bg);
+  border-radius: 5px;
+  border-top: 5px solid var(--color-primary);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+#testimonials .snip1533:hover {
+  transform: scale(1.05);
+}
+
+#testimonials .snip1533 *,
+#testimonials .snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+#testimonials .snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+#testimonials .snip1533 figcaption:before {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: var(--color-fg);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-section-bg);
+  color: var(--color-primary);
+  content: "\f10e";
+  font-family: "FontAwesome";
+  font-size: 32px;
+  font-style: normal;
+  left: 50%;
+  line-height: 60px;
+  position: absolute;
+  top: -30px;
+  width: 60px;
+}
+
+#testimonials .snip1533 h3 {
+  color: var(--color-fg);
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+}
+
+#testimonials .snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+#testimonials .snip1533 blockquote {
+  font-style: italic;
+  font-weight: 300;
+  margin: 0 0 20px;
+}

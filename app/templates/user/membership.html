@@ -1,0 +1,59 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="membership">
+    <h1>Membership Plans</h1>
+    <div class="membership">
+        <div class="section">
+            <h3>
+                <svg viewBox="0 0 448 512">
+                    <path opacity="1" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                </svg>
+                Personal
+            </h3>
+            <span>$0</span>
+            <ul>
+                <li>Upto Make 10cards free</li>
+                <li>Template theme provided</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+            </ul>
+            <a class='{% if memebership == "Personal" %}active{% endif %}'>{% if memebership == "Personal" %}Selected{% else %}Select{% endif %}</a>
+        </div>
+        <div class="section">
+            <h3>
+                <svg viewBox="0 0 640 512">
+                    <path opacity="1" d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/>
+                </svg>
+                Business
+            </h3>
+            <span>$199</span>
+            <ul>
+                <li>Make Upto 50cards</li>
+                <li>Custom theme provided</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+            </ul>
+            <a href='{% if memebership != "Business" %}/getmembership/business{% else %}#{% endif %}' class='{% if memebership == "Business" %}active{% endif %}'>{% if memebership == "Business" %}Selected{% else %}Select{% endif %}</a>
+        </div>
+        <div class="section">
+            <h3>
+                <svg viewBox="0 0 384 512">
+                    <path opacity="1" d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/>
+                </svg>
+                Enterprise
+            </h3>
+            <span>$499</span>
+            <ul>
+                <li>Make endless free cards</li>
+                <li>Custom theme provided</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+                <li>Some more perks</li>
+            </ul>
+            <a href='{% if memebership != "Enterprise" %}/getmembership/enterprise{% else %}#{% endif %}' class='{% if memebership == "Enterprise" %}active{% endif %}'>{% if memebership == "Enterprise" %}Selected{% else %}Select{% endif %}</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+/* Source Code CSS */
+
+#source-code {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 2rem;
+    background: var(--color-section-bg);
+    border-radius: 10px;
+}
+
+#source-code h1 {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--color-primary);
+}
+
+#source-code div {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+#source-code h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#source-code ul {
+    list-style-type: none;
+}
+
+#source-code li {
+    font-size: 1rem;
+}
+
+#source-code li::before {
+    content: "✔";
+    font-weight: 600;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+#source-code a {
+    color: var(--color-primary);
+}
+
+@media screen and (max-width:520px) {
+    #source-code {
+        width: 320px;
+    }
+}

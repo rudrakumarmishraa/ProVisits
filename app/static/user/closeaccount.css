@@ -1,0 +1,70 @@
+/* Close Account CSS */
+#close-account {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#close-account h1 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+#close-account details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#close-account h3 {
+    width: 100%;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    color: var(--color-primary);
+}
+
+#close-account p {
+    width: 100%;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+#close-account form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#close-account form label,input {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#close-account form button {
+    width: fit-content;
+    font-size: 1.25rem;
+    color: var(--color-fg);
+    background: transparent;
+    padding: 5px 20px;
+    border: 1px solid var(--color-danger);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+#close-account form button:hover {
+    color: var(--color-danger);
+    transform: scale(0.97);
+}
+
+#close-account #error {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-danger);
+}

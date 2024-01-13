@@ -1,0 +1,23 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="close-account">
+    <h1>Close Your ProVisits Account</h1>
+    <div class="details">
+        <h3>We're sorry to see you go.</h3>
+        <br><br>
+        <p>Once your account is closed, your digital visiting card and all associated data will be permanently deleted.</p>
+        <p>You won't be able to recover your account or data after the closure.</p><br>
+        <p>If you have any remaining subscription period, it won't be refunded.</p>
+        <p>Thank you for using ProVisits. We hope to see you again in the future!</p>
+    </div>
+    <p id="error">{{ error }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="checkbox" id="checkbox" name="checkbox">
+            <label for="checkbox">I agree, Please remove my account</label>
+        </div>
+        <button>Close Account</button>
+    </form>
+</div>
+{% endblock %}

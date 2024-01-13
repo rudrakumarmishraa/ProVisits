@@ -1,0 +1,207 @@
+/* Sidebar CSS */
+#sidebar {
+    display: flex;
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--color-section-bg);
+    box-shadow: 2px 0 20px var(--color-bg);
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+
+#sidebar .hero {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10px 1rem 10px;
+}
+
+#sidebar .hero img {
+    width: 50px;
+}
+
+#sidebar .hero p {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+#sidebar .user-details .logo {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid var(--color-fg);
+    border-radius: 50%;
+}
+
+#sidebar .user-details {
+    display: flex;
+    align-items: center;
+    background: var(--color-section-bg);
+    margin: 1rem 10px;
+    padding: 5px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+#sidebar .user-details .details {
+    width: 100%;
+}
+
+#sidebar .user-details .details h4 {
+    font-size: 1rem;
+    color: var(--color-primary);
+}
+
+#sidebar .user-details .details p {
+    font-size: 0.9rem;
+    color: var(--color-secondary)
+}
+
+#sidebar .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 5px;
+}
+
+#sidebar .navigation a {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px 10px;
+    transition: 0.5s ease;
+    border-radius: 5px;
+}
+
+#sidebar .navigation a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-fg);
+    transition: 0.5s ease;
+}
+
+#sidebar .navigation a:hover {
+    color: var(--color-secondary);
+    background: var(--color-section-bg);
+}
+
+#sidebar .navigation a:hover svg {
+    fill: var(--color-secondary);
+}
+
+#sidebar .navigation a.active {
+    color: var(--color-primary) !important;
+}
+
+#sidebar .navigation a.active svg {
+    fill: var(--color-primary) !important;
+}
+
+#sidebar .bottom-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 5px 5px 5px;
+    padding: 5px;
+}
+
+#sidebar .bottom-nav a {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    gap: 10px;
+    padding: 5px;
+    transition: 0.5s ease;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+
+#sidebar .bottom-nav a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-fg);
+    transition: 0.5s ease;
+}
+
+#sidebar .bottom-nav a:first-child:hover {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+#sidebar .bottom-nav a:first-child:hover svg {
+    fill: var(--color-secondary);
+}
+
+#sidebar .bottom-nav a:first-child.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#sidebar .bottom-nav a:first-child.active svg {
+    fill: var(--color-primary);
+}
+
+#sidebar .bottom-nav a:last-child:hover {
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+#sidebar .bottom-nav a:last-child:hover svg {
+    fill: var(--color-danger);
+}
+
+
+/* Media Query for Sidebar CSS */
+@media screen and (max-width:1000px){
+    #sidebar {
+        width: 200px;
+    }
+    #sidebar .hero p {
+        display: none;
+    }
+    #sidebar .navigation a {
+        font-size: 0.9rem;
+    }
+    #sidebar .bottom-nav a p {
+        font-size: 0.9rem;
+    }
+    #sidebar .user-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width:600px){
+    #sidebar {
+        width: 60px;
+    }
+    #sidebar .hero img {
+        width: 30px;
+    }
+    #sidebar .navigation a {
+        background: var(--color-section-bg);
+    }
+    #sidebar .navigation a p {
+        display: none;
+    }
+    #sidebar .bottom-nav a p {
+        display: none;
+    }
+    #sidebar .user-details img {
+        width: 25px;
+        height: 25px;
+    }
+    #sidebar .user-details {
+        display: none;
+    }
+}

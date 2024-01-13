@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+:root {
+    --color-bg: #000;
+    --color-fg: #fff;
+    --color-light: #999;
+    --color-danger: #E3242B;
+    --color-section-bg: rgba(1, 1,1,.3);
+    --color-primary: #c325fe;
+    --color-primary-variant: #a573f7;
+    --color-secondary: #bdb4ff;
+    --color-blue: #478adb;
+    --color-blue-variant: #25dee3;
+}
+body {
+    width: 100vw;
+    font-size: 18px;
+    text-align: justify;
+    color: var(--color-fg);
+    background: var(--color-bg);
+    background: linear-gradient(90deg, rgba(51,51,51,1) 12%, rgba(0,0,69,1) 65%, rgba(17,17,17,0.8939950980392157) 100%);
+    overflow: hidden;
+}
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+a {
+    color: var(--color-fg);
+    text-decoration: none;
+}
+body,
+input,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+#sidebar, #main-content {
+    backdrop-filter: blur(20px);
+}
+#main {
+    display: flex;
+    max-width: 100vw;
+    max-height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+}
+#main-content {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-section-bg);
+    box-shadow: 2px 0 20px var(--color-bg);
+    font-size: 1rem;
+    overflow-y: scroll;
+}
+/* Top Bar CSS */
+.top-bar {
+    display: flex;
+    width: 100%;
+    font-size: 1.25rem;
+    align-items: center;
+    background: var(--color-section-bg);;
+    padding: 10px 2rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@media screen and (max-width:440px) {
+    .top-bar {
+        font-size: 1rem;
+    }
+}

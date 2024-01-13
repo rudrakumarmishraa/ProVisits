@@ -1,0 +1,96 @@
+/* Footer Css Starts Here */
+.footer {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 1rem;
+    color: var(--color-fg);
+    background: var(--color-bg);
+    box-shadow: -5px 5px 30px 5px var(--color-bg);
+}
+
+.footer .footer-top {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.footer .footer-top .sections {
+    display: flex;
+    width: 220px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer .footer-top .sections h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.footer .footer-top .sections .links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer .footer-top .sections .links a {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--color-light);
+    transition: 0.5s ease;
+}
+
+.footer .footer-top .sections .links a::after {
+    display: block;
+    content: '';
+    width: 60%;
+    border-bottom: 2px solid var(--color-primary);
+    transform: scaleX(0);
+    transition: transform 500ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+.footer .footer-top .sections .links a:hover {
+    color: var(--color-primary);
+}
+
+.footer .footer-top .sections .links a:hover::after {
+    transform: scaleX(1);
+}
+
+.footer .footer-top .sections .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer .footer-top .sections .social-links a svg {
+    width: 25px;
+    height: 25px;
+    fill: var(--color-fg);
+    transition: 0.5s ease;
+}
+
+.footer .footer-top .sections .social-links a svg:hover {
+    transform: scale(1.2);
+    fill: var(--color-primary);
+}
+
+.footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-top: 1px solid var(--color-light);
+}
+
+@media screen and (max-width:500px) {
+    .footer .footer-top .sections {
+        width: 100%;
+    }
+}

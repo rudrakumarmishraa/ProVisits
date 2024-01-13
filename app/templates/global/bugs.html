@@ -1,0 +1,15 @@
+{% extends 'global/scenes/all.html' %}
+{% block content %}
+<!-- Bugs Section Starts Here -->
+<section id="bugs">
+<h1>Report a Bug</h1>
+<form method="post">
+{% csrf_token %}
+<input name="bug" type="text" placeholder="title">
+<textarea name="details" placeholder="details"></textarea>
+<p id="backendError">{{ error }}</p>
+<button>Submit</button>
+</form>
+</section>
+<!-- Bugs Section Ends Here -->
+{% endblock %}

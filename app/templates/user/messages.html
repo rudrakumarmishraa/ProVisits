@@ -1,0 +1,24 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="messages">
+    <h1>Messages</h1>
+    <div class="messages">
+        <div class="item">
+            <h4>Name</h4>
+            <h4>Cardname</h4>
+            <h4>Date / Time</h4>
+            <h4>Actions</h4>
+        </div>
+        {% for message in messages %}
+        {% for msg in message %}
+        <div class="item">
+            <span>{{ msg.name }}</span>
+            <span>{{ msg.cardname }}</span>
+            <span>{{ msg.date }}, {{ msg.time }}</span>
+            <a href="/message/{{ msg.messageID }}">View</a>
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+/* Messages CSS */
+
+#messages {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+#messages h1 {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#messages .messages {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#messages .messages .item {
+    display: flex;
+    gap: 10px !important;
+}
+
+#messages .messages .item:first-child {
+    padding: 10px 0;
+    background:  var(--color-bg);
+    border-radius: 5px;
+}
+
+#messages .messages .item h4 {
+    color: var(--color-secondary);
+}
+
+#messages .messages .item h4,#messages .messages .item span, #messages .messages .item a {
+    width: 30%;
+    text-align: left;
+}
+
+#messages .messages .item a {
+    display: flex;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+#messages .messages .item a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+/* Media Query */
+@media screen and (max-width:1000px) {
+    #messages .messages .item h4, #messages .messages .item span {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #messages .messages .item h4:nth-child(3), #messages .messages .item span:nth-child(3) {
+        display: none;
+    }
+}

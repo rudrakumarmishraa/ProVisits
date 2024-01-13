@@ -1,0 +1,23 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="deletecard">
+    <h1>Delete Your ProVisits Card</h1>
+    <div class="details">
+        <h3>We're sorry to see delete a card.</h3>
+        <br><br>
+        <p>Once your card is deleted, your digital visiting card and all associated data will be permanently deleted.</p>
+        <p>You won't be able to recover your card or data after the closure.</p><br>
+        <p>If you have any remaining subscription period, it won't be refunded.</p>
+        <p>Thank you for using ProVisits. We hope to see you again in the future!</p>
+    </div>
+    <p id="error">{{ error }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <input type="checkbox" id="checkbox" name="checkbox" required>
+            <label for="checkbox">I agree, Please delete my card</label>
+        </div>
+        <button>Delete Card</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<meta charset="UT-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="https://img.icons8.com/nolan/64/bank-card-back-side.png" type="image/x-icon">
+<link rel="stylesheet" href="{% static 'user/all.css' %}">
+<link rel="stylesheet" href="{% static 'user/sidebar.css' %}">
+<link rel="stylesheet" href="{% static 'user/dashboard.css' %}">
+<link rel="stylesheet" href="{% static 'user/analytics.css' %}">
+<link rel="stylesheet" href="{% static 'user/settings.css' %}">
+<link rel="stylesheet" href="{% static 'user/membership.css' %}">
+<link rel="stylesheet" href="{% static 'user/cards.css' %}">
+<link rel="stylesheet" href="{% static 'user/addcards.css' %}">
+<link rel="stylesheet" href="{% static 'user/editcard.css' %}">
+<link rel="stylesheet" href="{% static 'user/deletecard.css' %}">
+<link rel="stylesheet" href="{% static 'user/changepassword.css' %}">
+<link rel="stylesheet" href="{% static 'user/closeaccount.css' %}">
+<link rel="stylesheet" href="{% static 'user/getmembership.css' %}">
+<link rel="stylesheet" href="{% static 'user/product.css' %}">
+<link rel="stylesheet" href="{% static 'user/products.css' %}">
+<link rel="stylesheet" href="{% static 'user/addproduct.css' %}">
+<link rel="stylesheet" href="{% static 'user/editproduct.css' %}">
+<link rel="stylesheet" href="{% static 'user/messages.css' %}">
+<link rel="stylesheet" href="{% static 'user/message.css' %}">
+<title>{{ title }} | Provisits</title>
+</head>
+<body>
+<section id="main">
+<!-- Sidebar Starts Here -->
+{% include 'user/scenes/sidebar.html' %}
+<!-- Sidebar Ends Here -->
+    
+<!-- Main Content Starts Here -->
+<section id="main-content">
+    <!-- Top Bar -->
+    <div class="top-bar" id="timeCurrent">
+    </div>
+    {% block content %}
+    {% endblock %}
+</section>
+<!-- Main Content Ends Here -->
+</section>
+</body>
+<script>
+// Setting current time each second
+setInterval(() => { document.querySelector("#timeCurrent").innerHTML = new Date().toString().substring(0, 24) }, 1000);
+</script>
+</html>

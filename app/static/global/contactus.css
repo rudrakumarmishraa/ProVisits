@@ -1,0 +1,127 @@
+/* Contact Us CSS */
+#contactus {
+    display: flex;
+    margin: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1 {
+    width: fit-content;
+    font-size: 2.5rem;
+    margin: 2rem auto;
+}
+
+#contactus .left {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    background: var(--color-bg);
+}
+
+#contactus .left h3 {
+    font-size: 2rem;
+}
+
+#contactus .left input {
+    width: 100%;
+    border: 0;
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    outline: none;
+    font-size: 1.2rem;
+    background: transparent;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#contactus .left textarea {
+    width: 100%;
+    height: 200px;
+    border: 0;
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    outline: none;
+    font-size: 1.2rem;
+    background: transparent;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#contactus .left input:focus , #contactus .left textarea:focus {
+    box-shadow: -5px 2px 50px 2px var(--color-bg);
+}
+
+#contactus .left #msgBox {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: justify;
+}
+
+#contactus .left button {
+    width: fit-content;
+    font-size: 1.25rem;
+    padding: 5px 40px;
+    color: var(--color-fg);
+    background: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#contactus .right {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 1rem 2rem;
+    background: var(--color-section-bg);
+}
+
+#contactus .right h3 {
+    font-size: 2rem;
+}
+
+#contactus .right p {
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+#contactus .right .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#contactus .right .social-links svg {
+    width: 50px;
+    height: 50px;
+    fill: var(--color-fg);
+    transition: 0.5s ease;
+}
+
+#contactus .right .social-links svg:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query for Contact Us CSS */
+@media screen and (max-width:1000px)  {
+    #contactus .right .social-links svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:730px)  {
+    #contactus {
+        flex-direction: column;
+    }
+    
+    #contactus .left, #contactus .right {
+        width: 100%;
+    }
+}

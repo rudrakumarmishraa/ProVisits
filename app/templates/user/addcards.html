@@ -1,0 +1,34 @@
+{% extends 'user/scenes/all.html' %}
+{% block content %}
+<div id="addcards">
+    <h1>Add a New Card</h1>
+    <p id="error">{{ error }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <h3>Basic Details</h3>
+        <div class="input">
+            <input type="text" name="cardname" placeholder="Cardname" required>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <textarea name="about" placeholder="About" required></textarea>
+        </div>
+        <h3>Links</h3>
+        <div class="input">
+            <input type="number" name="phone" placeholder="Phone" required>
+            <input type="number" name="whatsaspp" placeholder="Whatsaspp" required>
+            <input type="text" name="email" placeholder="Email" required>
+            <input type="text" name="address" placeholder="Address" required>
+            <input type="text" name="website" placeholder="Website">
+        </div>
+        <h3>Social Links</h3>
+        <div class="input">
+            <input type="text" name="facebook" placeholder="facebook">
+            <input type="text" name="instagram" placeholder="instagram">
+            <input type="text" name="twitter" placeholder="twitter">
+            <input type="text" name="linkedin" placeholder="linkedin">
+            <input type="text" name="youtube" placeholder="youtube">
+        </div>
+        <button>SAVE</button>
+    </form>
+</div>
+{% endblock %}

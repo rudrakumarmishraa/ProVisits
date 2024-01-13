@@ -1,0 +1,21 @@
+/* Analytics CSS */
+
+#analytics {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#analytics h1 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+}
+
+#analytics .chart {
+    height: 100vh;
+}

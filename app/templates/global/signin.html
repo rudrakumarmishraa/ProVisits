@@ -1,0 +1,53 @@
+{% extends 'global/scenes/all.html' %}
+{% block content %}
+<!-- Login Form Section Starts Here -->
+<form method="post" id="login-form">
+    {% csrf_token %}
+    <h2>Sign In</h2>
+    <div class="input">
+        <input type="text" name="username" placeholder="username">
+        <p id="nameError"></p>
+        <svg class="svg" height="16" width="14" viewBox="0 0 448 512">
+            <path opacity="1" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+        </svg>
+    </div>
+    <div class="input">
+        <input type="password" name="password" placeholder="password">
+        <p id="passwordError"></p>
+        <svg class="svg" height="16" width="16" viewBox="0 0 512 512">
+            <path opacity="1" d="M336 352c97.2 0 176-78.8 176-176S433.2 0 336 0S160 78.8 160 176c0 18.7 2.9 36.8 8.3 53.7L7 391c-4.5 4.5-7 10.6-7 17v80c0 13.3 10.7 24 24 24h80c13.3 0 24-10.7 24-24V448h40c13.3 0 24-10.7 24-24V384h40c6.4 0 12.5-2.5 17-7l33.3-33.3c16.9 5.4 35 8.3 53.7 8.3zM376 96a40 40 0 1 1 0 80 40 40 0 1 1 0-80z" />
+        </svg>
+    </div>
+    <p id="backendError">{{ error }}</p>
+    <button>Sign In</button>
+    <span>Dont have and account <a href="/signup">Sign Up</a></span>
+</form>
+<script>
+////////////     All Variables     ////////////
+const nameField = document.querySelector("input[name='username']")
+const passwordField = document.querySelector("input[name='password']")
+const emailError = document.querySelector("#emailError")
+const passwordError = document.querySelector("#passwordError")
+
+// Event Listner for Name which check keystrokes
+nameField.addEventListener("keyup", (event) => {
+    const input = event.target.value
+    if (input.length < 2) { nameError.innerHTML = "Please fill username." }
+    else if (input.length > 64) { nameError.innerHTML = "username must be less than 64characters." }
+    else if ((/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/).test(input)) { nameError.innerHTML = "username cann't contain special characters." }
+    else if ((/\d/).test(input)) { nameError.innerHTML = "username cann't contain numbers." }
+    else { nameError.innerHTML = "" }
+})
+
+// Event Listner for Password which check keystrokes
+passwordField.addEventListener("keyup", (event) => {
+    const input = event.target.value
+    if (input.length < 8) { passwordError.innerHTML = "Password must be greater than 8characters" }
+    else if (input.length > 64) { passwordError.innerHTML = "Password must be less than 64characters" }
+    else if (!(/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/).test(input)) { passwordError.innerHTML = "Password must contain special characters" }
+    else if (!(/\d/).test(input)) { passwordError.innerHTML = "Password must contain numbers" }
+    else { passwordError.innerHTML = "" }
+})
+</script>
+<!-- Login Form Section Ends Here -->
+{% endblock %}

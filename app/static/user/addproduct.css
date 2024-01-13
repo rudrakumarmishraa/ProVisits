@@ -1,0 +1,143 @@
+/* Add Products CSS */
+
+#add-products {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+#add-products h1 {
+    font-size: 2rem;
+}
+
+#add-products #error {
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-danger);
+}
+
+#add-products .add-products {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#add-products .add-products .input {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#add-products .add-products .input:first-child {
+    justify-content: space-between;
+}
+
+#add-products .add-products .input:last-child {
+    justify-content: space-evenly;
+}
+
+#add-products .add-products .input input[type="text"],
+#add-products .add-products input[type="number"] {
+    width: 300px;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 5px 10px;
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+}
+
+#add-products .add-products .input input[type="text"]:focus,
+#add-products .add-products input[type="number"]:focus {
+    border-color: var(--color-primary);
+}
+
+#add-products .add-products .input select {
+    width: 300px;
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color-fg);
+    background-color: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 10px;
+    appearance: none;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+#add-products .add-products .input select::-ms-expand {
+    display: none;
+}
+
+#add-products .add-products .input select:focus {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#add-products .add-products .input option {
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    margin: 0;
+    padding: 5px 10px;
+    appearance: none;
+    line-height: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+#add-products .add-products .input input[type="file"] {
+    display: inline-block;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 5px;
+}
+
+#add-products .add-products .input input[type="file"]::file-selector-button {
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    color: var(--color-fg);
+    background: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+#add-products .add-products .input input[type="file"]::file-selector-button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+#add-products .add-products button {
+    width: fit-content;
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    color: var(--color-fg);
+    background: transparent;
+    border: 1px solid var(--color-fg);
+    border-radius: 5px;
+    transition: 500ms ease;
+    cursor: pointer;
+}
+
+#add-products .add-products button:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}

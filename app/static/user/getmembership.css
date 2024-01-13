@@ -1,0 +1,70 @@
+/* Get Membership CSS */
+
+#get-membership {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 10px;
+}
+
+#get-membership h1 {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+}
+
+#get-membership h1 span {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    background: var(--color-primary-variant);
+    padding: 5px 20px;
+    border-radius: 50px;
+}
+
+#get-membership .container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#get-membership .container h3 {
+    font-size: 1.5rem;
+}
+
+#get-membership .container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+}
+
+#get-membership .container li {
+    font-size: 1rem;
+}
+
+#get-membership .container li::before {
+    content: "✔";
+    font-weight: 600;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+#get-membership .container a {
+    width: fit-content;
+    padding: 5px 20px;
+    color: var(--color-primary-variant);
+    border: 1px solid var(--color-primary-variant);
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: 0.5s ease;
+}
+
+#get-membership .container a:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}

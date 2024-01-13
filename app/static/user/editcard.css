@@ -1,0 +1,113 @@
+/* Edit Cards CSS */
+
+#editcard {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background: var(--color-section-bg);
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 2rem;
+    border-radius: 10px;
+}
+
+#editcard>h1 {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+#editcard #error {
+    width: 100%;
+    font-weight: bold;
+    color: var(--color-danger);
+}
+
+#editcard form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#editcard form h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color:  var(--color-primary);
+}
+
+#editcard form h3::before, #editcard form h3::after {
+    display: inline-block;
+    content: "";
+    width: 80px;
+    height: 0;
+    border: 1px solid var(--color-primary);
+}
+
+#editcard form .input {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#editcard form .input input, #editcard form .input textarea {
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+}
+
+#editcard form .input input:focus, #editcard form .input textarea:focus {
+    border-color: var(--color-primary);
+}
+
+#editcard form .input input {
+    width: 300px;
+    border-radius: 5px;
+}
+
+#editcard form .input textarea {
+    width: 100%;
+    height: 80px;
+    resize: none;
+}
+
+#editcard form button {
+    width: fit-content;
+    font-size: 1.25rem;
+    padding: 10px 30px;
+    color: var(--color-fg);
+    border: 1px solid var(--color-fg);
+    background: transparent;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#editcard form button:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: scale(0.95);
+}
+
+@media screen and (max-width:1000px) {
+    #editcard form .input textarea {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:870px) {
+    #editcard form .input input, #editcard form .input textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #editcard form h3::before, #editcard form h3::after {
+        width: 50px;
+    }
+}
