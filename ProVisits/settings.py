@@ -1,7 +1,7 @@
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-275mt1)jin#63^95f#&l)y#@f*ugy*m@ih(l45$kbznistjx0)'
-DEBUG = True
+DEBUG = False
 RAZOR_KEY_ID = "rzp_test_QPGlGIhrgbbcRJ"
 RAZOR_KEY_SECRET = "v8kQclGEfITvLXkzeItEqSjh"
 ALLOWED_HOSTS = ['.rudrakumarmishra.com', '.vercel.app']
