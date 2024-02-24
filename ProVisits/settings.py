@@ -4,7 +4,7 @@ SECRET_KEY = 'django-insecure-275mt1)jin#63^95f#&l)y#@f*ugy*m@ih(l45$kbznistjx0)
 DEBUG = True
 RAZOR_KEY_ID = "rzp_test_QPGlGIhrgbbcRJ"
 RAZOR_KEY_SECRET = "v8kQclGEfITvLXkzeItEqSjh"
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.rudrakumarmishra.com', '.vercel.app']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
